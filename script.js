@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const button = document.querySelector('.home-container button');
-    button.addEventListener('click', function() {
-        window.location.href = 'birthday.html';
-    });
+document.addEventListener('DOMContentLoaded', function () {
+  const button = document.querySelector('.home-container button');
+  button.addEventListener('click', function () {
+    window.location.href = 'birthday.html';
+  });
 });
 
 //cursor heart
@@ -64,3 +64,35 @@ document.onmousemove = function (e) {
 };
 
 //flower
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('section').forEach((section) => {
+    section.classList.add('scroll-trigger');
+    observer.observe(section);
+  });
+});
+
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'chocolate': {
+          light: '#8B4513',
+          DEFAULT: '#654321',
+          dark: '#3B2614'
+        }
+      }
+    }
+  }
+}
