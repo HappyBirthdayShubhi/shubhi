@@ -777,6 +777,14 @@ img:hover {
     pointer-events: auto !important;
 }
 
+.smiley-face {
+    font-size: 48px;
+    text-align: center;
+    padding: 20px;
+    animation: glow 2s ease-in-out infinite;
+}
+
+
 @keyframes glow {
     0%, 100% {
         text-shadow: 0 0 10px #fff,
