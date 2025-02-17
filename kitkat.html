@@ -47,6 +47,23 @@
         <div id="stars4"></div>
     </div>
     <!-- Main Content -->
+    <div class="fixed top-4 left-4 max-w-md bg-gradient-to-br from-[#3c1d14] to-[#2a1008] 
+            text-amber-100 rounded-xl p-6 shadow-2xl z-50 border border-[#5c3524]
+            animate-[float_3s_ease-in-out_infinite]" 
+        id="floatingMessage">
+        <div class="relative" id="messageContent">
+        <p class="text-sm md:text-base leading-relaxed pr-6">
+            Honestly, I feel very bad and down for all the argument we had last week and I feel I was the reason; so another gift today is, I'll improve myself and change! just for you and I hope you love this work and by your HEART forgive me!! Last week was a wrong step, please don't think I'm that bad person😅
+        </p>
+        <button onclick="transformToSmiley()" 
+                class="absolute top-0 right-0 w-6 h-6 flex items-center justify-center 
+                    bg-[#ff6b6b] hover:bg-[#ff5252] text-white rounded-full 
+                    transition-colors duration-200">
+            ×
+        </button>
+        </div>
+    </div>
+
     <main class="flex-grow w-full max-w-4xl mx-auto px-4 py-12 flex flex-col items-center">
         <!-- KitKat Image Container -->
         <div class="relative mb-8 float-animation">
@@ -111,5 +128,17 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function transformToSmiley() {
+            const messageContent = document.getElementById('messageContent');
+            messageContent.innerHTML = '<div class="smiley-face"> Dil Ko Saaf Kiya, Shubhi Ne Mujhko Maaf Kiya😊✨</div>';
+            
+            // Adjust container size and styling
+            const container = document.getElementById('floatingMessage');
+            container.style.maxWidth = 'fit-content';
+            container.style.padding = '10px';
+        }
+    </script>
 </body>
 </html>
